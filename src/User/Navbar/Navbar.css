@@ -1,0 +1,100 @@
+.navbar {
+    height: 96vh;
+    padding-top: 4vh;
+    min-width: 100px;
+    background-color: black;
+    color: #fff;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 65px;
+    position: absolute;
+    letter-spacing: 1px;
+
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 8px;
+
+        .subscribe {
+            background-color: rgb(39, 34, 29);
+            border-radius: 50px;
+            color: rgb(255, 204, 117);
+            font-size: 12px;
+            padding: 4px 8px 4px 8px;
+            font-family: "Inter", sans-serif;
+        }
+    }
+
+    .pageIcons {
+        flex-direction: column;
+        display: flex;
+        color: rgb(159, 160, 161);
+        font-family: "Inter", sans-serif;
+        
+        
+        .wraper {
+            padding-left: 35px;
+            padding-right: 45px;
+            display: flex;
+            gap: 10px;
+            padding-top: 20px;
+            transition: scale 0.1s ease-in-out;
+            padding-bottom: 20px;
+            z-index: 2;
+            .icon {
+                font-size: 20px;
+
+            }
+            
+            .tag {
+                width: 80px;
+                position: absolute;
+                left: 70px;
+                opacity: 0;
+                /* padding-bottom: 40px; */
+                transform: translateX(-20%);
+                transition: transform 0.5s ease;
+            }
+        }
+        .wraper:hover  {
+            scale: 1.1;
+            color: #fff;
+        }
+    }
+    .pageIcons:hover {
+        +.grad {
+            z-index: 1;
+            opacity: 1;
+        }
+        .wraper {
+            .icon {
+                font-size: 20px;
+            }
+            .tag {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+    }
+    .grad {
+        height: 100vh;
+        background-image: linear-gradient(to right, black, transparent);
+        position: absolute;
+        top: 0;
+        left: 100px;
+        width: 500px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: -1;
+
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

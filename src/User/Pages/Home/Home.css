@@ -1,0 +1,26 @@
+.home{
+    margin-left: 100px;
+    width: 100%;
+    min-height: 100vh;
+}
+.video{
+
+}
+.thumbnail{
+}
+.carousel .thumbs-wrapper{
+    width: 300px !important;
+    position: absolute;
+    top: -150px;
+    right: 0px;
+}
+.carousel .control-disabled.control-arrow{
+    display: block !important;
+    opacity: 1 !important;
+}
+.carousel .control-dots{
+    display: none;
+}
+.carousel .carousel-status{
+    display: none;
+}
